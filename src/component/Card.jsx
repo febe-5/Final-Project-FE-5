@@ -6,11 +6,12 @@ const Card = (props) => {
   const handleClick = (id) => {
     navigation(`/detail/${id}`);
   };
+
+  console.log(props.imgUrl);
   return (
     <>
-      <div className="mx-10">
-        <div className="w-full rounded-lg shadow-md lg:max-w-sm bg-primary ">
-          <img className="object-cover w-full h-48 mb-10" src={props.url_gambar} alt="ini-gambar-guis" />
+      <div className="mx-10 my-10">
+        <div className="w-full rounded-lg shadow-md lg:max-w-sm bg-primary "><img className="object-cover w-full h-48 mb-10" src={props.imgUrl} alt="ini-gambar-guis" />
           <div className="p-4 text-center">
             <h5 className="text-white text-xl mb-1 font-bold">{props.nama}</h5>
             <p className="text-white text-sm font-normal mb-4">{props.lokasi}</p>

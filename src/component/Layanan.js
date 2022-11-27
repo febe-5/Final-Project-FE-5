@@ -21,7 +21,7 @@ const Layanan = () => {
   useEffect(() => {
     getKlinik();
   }, []);
-  console.log(klinik)
+
 
   return (
     <>

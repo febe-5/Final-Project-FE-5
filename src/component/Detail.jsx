@@ -29,9 +29,10 @@ return (
             <div className="container ml-100 mt-10">
                 <div className=" px-4">
                     <div className="max-w-xl mx-auto text-center mb-19 mt-10">
-                    {details.filter((item) => item.id === id).map((item) => {
+                    {details.filter((item) => item._id === id).map((item) => {
                         return (
                             <div key={item._id} className="block p-10 bg-white rounded-lg w-150 h-300 mt-10">
+                                <div className="mb-10 font-bold tracking-tight text-black"><img src={item.url_gambar} alt="ini-gambar-guis"/></div>
                                 
                                 <h1 className="mb-10 text-5xl font-bold tracking-tight text-black ">{item.nama}</h1>
                                 <p className="font-normal text-gray-700 dark:text-gray-400 mb-10">{item.profil}</p>
