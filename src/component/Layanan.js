@@ -40,7 +40,7 @@ const Layanan = () => {
       </div>
       <div className="div w-full px-4 mx-4 flex flex-wrap justify-center xl:w-10/12 xl:mx-auto">
         {klinik.map((item, index) => {
-          return <Card key={index} id={item.id} imgUrl={item.url_gambar} nama={item.nama} lokasi={item.lokasi} />
+          return <Card key={index} id={item._id} imgUrl={item.url_gambar} nama={item.nama} lokasi={item.lokasi} />
         })}
       </div>
       </div>
