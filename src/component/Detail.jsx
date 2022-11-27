@@ -29,7 +29,7 @@ return (
             <div className="container ml-100 mt-10">
                 <div className=" px-4">
                     <div className="max-w-xl mx-auto text-center mb-19 mt-10">
-                    {details.filter((item) => item._id === id).map((item) => {
+                    {details.filter((item) => item.id === id).map((item) => {
                         return (
                             <div key={item._id} className="block p-10 bg-white rounded-lg w-150 h-300 mt-10">
                                 
