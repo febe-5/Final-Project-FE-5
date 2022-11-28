@@ -36,7 +36,7 @@ return (
                                 
                                 <h1 className="mb-10 text-5xl font-bold tracking-tight text-black ">{item.nama}</h1>
                                 <p className="font-normal text-gray-700 dark:text-gray-400 mb-10">{item.profil}</p>
-                                <a href={item.no_telp} className="text-base font-semibold text-black bg-primary py-3 px-8 rounded-full hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out mb">Jadwalkan Konsultasi</a>
+                                <a href={'tel:' + item.no_telp} className="text-base font-semibold text-black bg-primary py-3 px-8 rounded-full hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out mb">Jadwalkan Konsultasi</a>
                                 <div className="bg-teal-400 mt-10 rounded-xl mx-20">
                                   <p className="mb-10 text-2xl font-bold tracking-tight text-black mt-11">Kontak Kami</p>
                                   <p className="font-normal text-gray-700 dark:text-gray-400 mb-5">{item.no_telp}</p>

@@ -13,6 +13,7 @@ const Navbar = () => {
             <li className="p-4 hover:text-meds">Layanan 2</li>
           </Link>
           <li className="p-4 hover:text-meds">Artikel</li>
+          <li className="p-4 hover:text-meds">About us</li>
           <li className="text-base font-semibold text-white bg-secondary flex items-center mx-4 my-3 py-1 px-8 rounded-full hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out">Login</li>
         </ul>
       </div>
