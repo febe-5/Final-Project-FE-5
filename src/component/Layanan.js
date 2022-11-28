@@ -25,9 +25,9 @@ const Layanan = () => {
 
   return (
     <>
-    <div className="text-blue bg-green-200">
+    <div className="text-blue bg-green-100">
       <div className="mt-4 z-0 flex items-center justify-between relative max-w-full">
-        <div className="px-4">
+        <div className="">
           <img src={BG} alt="" />
         </div>
       </div>
