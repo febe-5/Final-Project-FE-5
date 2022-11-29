@@ -1,51 +1,54 @@
 import React from "react";
-import BG from "../assets/bg.jpg";
-import Card from "./Card";
-import { useEffect, useState } from "react";
-import axios from "axios";
+import { Link } from "react-router-dom";
 
-
-const Layanan = () => {
-  const [klinik, setKlinik] = useState([]);
-
-  const getKlinik = async () => {
-    try {
-      let response = await axios.get("http://13.212.29.212:3000/api/klinik");
-      setKlinik(response.data.dataKlinik);
-      
-    } catch (e) {
-      console.log(e.message);
-    }
-  };
-
-  useEffect(() => {
-    getKlinik();
-  }, []);
-
-
+export default function Layanan() {
+  const [showModal, setShowModal] = React.useState(false);
   return (
     <>
-    <div className="text-blue bg-green-100">
-      <div className="mt-4 z-0 flex items-center justify-between relative max-w-full">
-        <div className="">
-          <img src={BG} alt="" />
-        </div>
-      </div>
-
-      <div className="w-full px-4 pt-10 ">
-        <div className="max-w-xl mx-auto text-center mb-16">
-          <h3 className="font-bold text-secondary text-4xl mb-2 lg:text-lg">Daftar Klinik & Rumah Sakit</h3>
-          <h2 className="font-bold text-primary text-xl mb-4 lg:text-6xl">Kesehatan Mental</h2>
-        </div>
-      </div>
-      <div className="div w-full px-4 mx-4 flex flex-wrap justify-center xl:w-10/12 xl:mx-auto">
-        {klinik.map((item, index) => {
-          return <Card key={index} id={item._id} imgUrl={item.url_gambar} nama={item.nama} lokasi={item.lokasi} />
-        })}
-      </div>
-      </div>
+      <button
+        className=" text-black "type="button" onClick={() => setShowModal(true)}>Jadwalkan Konsultasi</button>
+      {showModal ? (
+        <>
+          <div
+            className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50  ">
+            <div className="relative w-auto my-6 mx-auto max-w-3xl">
+              <div className="border-0 rounded-lg shadow-lg relative flex flex-col min-w-full bg-primary  ">
+                <div className="flex items-start p-5 border-b border-solid">
+                  <h3 className="text-3xl font-semibold  text-center text-green-100">Pilih Media</h3>
+                  <button
+                        className="text-red-500 background-transparent font-bold uppercase text-sm outline-none focus:outline-none ease-linear transition-all duration- text-end"
+                        type="button"
+                        onClick={() => setShowModal(false)}>X
+                  </button>
+                  <button
+                    className="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl font-semibold  "
+                    onClick={() => setShowModal(false)}>
+                  </button>
+                </div>
+                
+                <div className="flex flex-col items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
+                    <Link to="/ofline">
+                        <button
+                            className="bg-green-100 text-primary active:bg-emerald-600 font-bold uppercase text-sm px-10 py-3 rounded shadow hover:shadow-lg  mr-1 mb-1 ease-linear transition-all duration-150"
+                            type="button"
+                            onClick={() => setShowModal(false)}>Offline
+                        </button>
+                    </Link>
+                    <p className="text-green-100 my-4">Atau</p>
+                    <Link to="/about">
+                        <button
+                            className="bg-green-100 text-primary active:bg-emerald-600 font-bold uppercase text-sm px-11 py-3 rounded shadow hover:shadow-xl mr-1 mb-1 ease-linear transition-all duration-150"
+                            type="button"
+                            onClick={() => setShowModal(false)}>Online 
+                        </button>
+                    </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="opacity-70 fixed inset-0 z-40 bg-black"></div>
+        </>
+      ) : null}
     </>
   );
-};
-
-export default Layanan;
+}
