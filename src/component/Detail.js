@@ -31,19 +31,7 @@ return (
                     <div className="max-w-xl mx-auto text-center mb-19 mt-10">
                     {details.filter((item) => item._id === id).map((item) => {
                         return (
-                          // <div>
-                          //   <div className="pt-6 pb-16 bg-green-100 mt-10">
-                          //     <div className="flex lg:flex-row mt-20 gap-10 items-center md : flex-col">
-                          //       <div className= 'object-center ml-20 mr-20 w-11/12'>
-                          //         <img src={item.url_gambar} alt=" Not Found"/>
-                          //       </div>
-                          //       <div className='basis-auto object-center ml-20 mr-20'>
-                          //         <h1 className='text-5xl font-extrabold text-black'>{item.nama}</h1>
-                          //         <p className="font-normal text-gray-700 dark:text-gray-400 mb-10">{item.profil}</p>
-                          //       </div>
-                          //    </div>
-                          //   </div>
-                          // </div>
+
                           
                           <div key={item._id} className="block p-10 bg-green-100 rounded-lg min-w-full ">
                                 <div className="mb-10 font-bold tracking-tight text-black">
