@@ -1,9 +1,11 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import Navbar from "./Navbar";
 
 const Pembayaran = () => {
+	const navigation = useNavigate();
+
 	const { id } = useParams();
 
 	const [psikolog, setPsikolog] = useState({});
@@ -72,7 +74,17 @@ const Pembayaran = () => {
 		}
 	};
 
+	const checkerLogin = () => {
+		const token = localStorage.getItem("accessToken");
+
+		if (!token) {
+			alert("login terlebih dahulu");
+			navigation("/detailPsikolog/" + id);
+		}
+	};
+
 	useEffect(() => {
+		checkerLogin();
 		getPsikolog();
 		getMethods();
 	}, []);
