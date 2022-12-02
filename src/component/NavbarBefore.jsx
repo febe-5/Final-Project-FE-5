@@ -22,8 +22,10 @@ const Navbar = () => {
           <Link to="/layananBefore">
             <li className="p-4 hover:text-meds">Layanan</li>
           </Link>
-          <li className="p-4 hover:text-meds">Artikel</li>
-          <Link to="/homeLogin">
+          <Link to="/blog">
+            <li className="p-4 hover:text-meds">Artikel</li>
+          </Link>
+          <Link to="/login">
             <li className="text-base font-semibold text-white bg-secondary flex items-center mx-4 my-3 py-1 px-8 rounded-full hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out">Login</li>
           </Link>
         </ul>
