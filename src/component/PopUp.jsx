@@ -1,7 +1,10 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const PopUp = ({ visible, onClose }) => {
   if (!visible) return null;
+
+  const navigate = useNavigate();
 
   return (
     <>
@@ -12,9 +15,13 @@ const PopUp = ({ visible, onClose }) => {
           </button>
           <div className="p-6 text-justify">
             <p className="m-2 text-2xl font-extrabold text-white">Opsi Konsultasi</p>
-            <p className="rounded-lg bg-primary p-2 text-white text-lg mt-1 mb-1 font-semibold text-center">Online</p>
+            <button className="rounded-lg bg-primary p-2 text-white text-lg my-2 font-semibold text-center mx-20" onClick={() => navigate("/psikolog")}>
+              Online
+            </button>
             <p className="text-white text-center text-sm font-normal mb-1">atau</p>
-            <p className="rounded-lg bg-primary p-2 text-white text-lg font-semibold text-center">Offline</p>
+            <button className="rounded-lg bg-primary p-2 text-white text-lg font-semibold my-2 mx-20 text-center" onClick={() => navigate("/klinik")}>
+              Offline
+            </button>
           </div>
         </div>
       </div>

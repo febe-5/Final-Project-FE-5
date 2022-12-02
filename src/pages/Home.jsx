@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Landing from "../assets/icon.png";
 import Navbar from "../component/Navbar";
 import Why from "../component/Why";
-import Psikolog from "../component/Psikolog";
 import Footer from "../component/Footer";
 import PopUp from "../component/PopUp";
 
@@ -35,7 +34,6 @@ const Home = () => {
         </div>
       </div>
       <Why />
-      <Psikolog />
       <PopUp onClose={handleOnClose} visible={showPopUp} />
       <Footer />
     </>

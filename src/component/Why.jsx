@@ -1,7 +1,7 @@
 import React from "react";
-import Icon1 from "../assets/about/1.png";
-import Icon2 from "../assets/about/2.png";
-import Icon3 from "../assets/about/3.png";
+import Icon1 from "../assets/why/1.png";
+import Icon2 from "../assets/why/2.png";
+import Icon3 from "../assets/why/3.png";
 
 const Why = () => {
   return (
@@ -13,7 +13,7 @@ const Why = () => {
             <h2 class="font-extrabold text-white text-2xl mb-4 lg:text-5xl">Kenapa Memilih Kami?</h2>
           </div>
         </div>
-        <div class="container bg-secondary rounded-2xl px-4 flex flex-wrap justify-center xl:w-11/12 xl:mx-auto">
+        <div class="container mb-14 bg-secondary rounded-2xl px-4 flex flex-wrap justify-center xl:w-11/12 xl:mx-auto">
           <div className="mb-4 mt-4 p-4 md:w-1/3 hover:scale-105">
             <div className="flex justify-center">
               <div className="rounded-2xl shadow-lg bg-primary mx-8 lg:mx-4">

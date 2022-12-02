@@ -64,7 +64,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="text-center p-6 bg-gray-200">
-          <span>© 2021 Copyright: MS Wellbeing</span>
+          <span>© 2021 Copyright: Mental Meds</span>
         </div>
       </footer>
     </>
