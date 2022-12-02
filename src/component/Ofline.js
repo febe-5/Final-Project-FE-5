@@ -13,7 +13,7 @@ const Ofline = () => {
 
   const getKlinik = async () => {
     try {
-      let response = await axios.get("http://13.212.29.212:3000/api/klinik");
+      let response = await axios.get("https://mental-meds.up.railway.app/api/klinik");
       setKlinik(response.data.dataKlinik);
       
     } catch (e) {

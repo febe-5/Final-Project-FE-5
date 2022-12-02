@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function Layanan() {
+export default function Konsultasi() {
   const [showModal, setShowModal] = React.useState(false);
   return (
     <>

@@ -17,16 +17,12 @@ const App = () => {
   return (
     <>
       <Navbar />
-      
-
       <Routes>
-        
         <Route path="/" element={<Konsultasi />} />
         <Route path="/layanan" element={<Layanan />} />
         <Route path="/ofline" element={<Ofline />} />
         <Route path="/about" element={<About />} />
         <Route path="/detail/:id" element={<Detail />} />
-        
       </Routes>
       <Footer/>
 

@@ -9,21 +9,21 @@ import { Link } from "react-router-dom";
 
 
 
-const AboutUs = () => {
-  const [about, setAbout] = useState([]);
+const Layanan = () => {
+  const [layanan, setLayanan] = useState([]);
 
-  const getAbout = async () => {
+  const getLayanan = async () => {
     try {
-      let response = await axios.get("https://mental-meds.herokuapp.com/api/layanan");
+      let response = await axios.get("https://mental-meds.up.railway.app/api/layanan");
       console.log(response.data);
-      setAbout(response.data.data);
+      setLayanan(response.data.data);
     } catch (e) {
       console.log(e.message);
     }
   };
 
   useEffect(() => {
-    getAbout();
+    getLayanan();
   }, []);
     return (
         <>
@@ -33,15 +33,13 @@ const AboutUs = () => {
           
           <div className='pt-6 pb-16 bg-green-100'>
             <div className="grid gap-4 lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 ml-20 mr-20 mt-10 mb-20 ">
-                      {about.map((items) => (
+                      {layanan.map((items) => (
                         <div>
                            <div className="w-full rounded-lg bg-teal-400 shadow-md lg:max-w-sm hover:bg-green-300 hover:shadow-lg" key={items._id} style={{}}>
                               <div className="p-4">
                                 {/* <img src={items.gmbr} alt="belom ada" /> */}
-                                  <h3 className="text-xl font-bold text-sky-600 text-center mt-5">{items.nama_layanan}</h3>
-                                  {/* <h2 className="text-xl text-sky-600 text-center mt-5">{items.title}</h2>
-                                  <p className=" leading-normal text-black-700 font-bold mb-2 mt-5 text-center">
-                                      {items.pesan}</p> */}
+                                  <h3 className="text-xl font-bold text-sky-600 text-center mt-5 py-10 px-10">{items.nama_layanan}</h3>
+        
                               </div>
                             </div>
                         </div>  
@@ -94,7 +92,7 @@ const AboutUs = () => {
                   <div className=' text-lg'>
                       <p className='text-xl font-bold'>2. Konseling Ofline</p>
                       <p className='my-7'>Kami menawarkan konseling di tempat yang aman dan nyaman yang terletak di MS Wellbeing Center</p>
-                      <Link to = "/LayananOfline">
+                      <Link to = "/Ofline">
                           <button className="bg-green-100  hover:bg-secondary hover:text-green-100 text-primary font-bold py-2 px-4 rounded-full">
                           Jadwalkan Konsultasi ofline
                           </button>
@@ -110,4 +108,4 @@ const AboutUs = () => {
     )
 }
 
-export default AboutUs
+export default Layanan

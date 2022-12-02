@@ -58,7 +58,7 @@ export const About = () => {
                 </div>
 
                 <div className=' object-center mr-50 lg:mr-80'>
-                    <h1 className='text-2xl font-extrabold text-black'>Yuk, Pilih klinik psikologmu sekarang juga!! </h1>
+                    <h1 className='text-2xl font-extrabold text-black'>Yuk, Jadwalkan konsultasimu sekarang juga!! </h1>
                     <div className="flex lg:flex-row mt-1 gap-10 items-center md : flex-col">
                         <div className= 'object-center w-max'>
                             <img src={Logo2} alt=" Not Found"/>
