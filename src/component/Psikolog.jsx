@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import Card from "./Card";
 import Navbar from "./Navbar";
 import axios from "axios";
+import Footer from "./Footer";
 
 const Psikolog = () => {
   const [psikolog, setPsikolog] = useState([]);
@@ -49,10 +50,11 @@ const Psikolog = () => {
 
         <div className="div w-full pt-10 px-4 mx-4 flex flex-wrap justify-center xl:w-10/12 xl:mx-auto">
           {psikolog.map((item, index) => {
-            return <Card key={index} id={item._id} imgUrl={item.image_url} nama={item.nama_psikolog} pendidikan={item.pendidikan} />;
+            return <Card key={index} _id={item._id} imgUrl={item.image_url} nama={item.nama_psikolog} pendidikan={item.pendidikan} />;
           })}
         </div>
       </div>
+      <Footer />
     </>
   );
 };

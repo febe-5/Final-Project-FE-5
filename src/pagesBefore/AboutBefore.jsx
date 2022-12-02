@@ -1,12 +1,14 @@
 import React from "react";
-import Navbar from "../component/Navbar";
+import Navbar from "../component/NavbarBefore";
 import About1 from "../assets/about/icon-about.png";
 import About2 from "../assets/about/icon-about2.png";
 import About3 from "../assets/about/icon-about3.png";
 import Logo2 from "../assets/about/Frame.png";
 import Footer from "../component/Footer";
+import { useNavigate } from "react-router-dom";
 
 const About = () => {
+  const navigate = useNavigate();
   return (
     <>
       <Navbar />
@@ -60,7 +62,7 @@ const About = () => {
           </div>
 
           <div className=" object-center mr-50 lg:mr-80">
-            <h1 className="text-2xl font-extrabold text-black">Yuk, jadwalkan sesi konseling online pertamamu</h1>
+            <h1 className="text-2xl font-extrabold text-black">Yuk, jadwalkan sesi konseling Pertamamu!</h1>
             <div className="flex lg:flex-row mt-1 gap-10 items-center md : flex-col">
               <div className="object-center w-max">
                 <img src={Logo2} alt=" Not Found" />
@@ -72,7 +74,9 @@ const About = () => {
               </div>
             </div>
             <p className=" text-black text-lg"></p>
-            <button className="bg-secondary  hover:bg-green-100 hover:text-primary text-white font-bold py-2 px-4 rounded-full">Selengkapnya</button>
+            <button className="bg-secondary  hover:bg-green-100 hover:text-primary text-white font-bold py-2 px-4 rounded-full" onClick={() => navigate("/login")}>
+              Selengkapnya
+            </button>
           </div>
         </div>
       </div>

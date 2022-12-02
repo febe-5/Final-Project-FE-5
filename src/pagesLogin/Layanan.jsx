@@ -72,7 +72,7 @@ const Layanan = () => {
         <div className="pt-6 pb-16 bg-teal-300">
           <h1 className="text-center font-extrabold text-black text-xl">Proses Konseling sesuai pilihan</h1>
           <div className="flex lg:flex-row mt-20 gap-20 items-left md : flex-col">
-            <div className="basis-auto object-center ml-20 mr-20">
+            <div className="basis-auto object-center mx-20">
               <h1 className="text-xl font-extrabold text-black mb-10">Kenapa harus percaya layanan kami?</h1>
               <div className=" text-lg">
                 <p className="text-xl font-bold">1. Konseling Online</p>
@@ -85,20 +85,20 @@ const Layanan = () => {
                 </button>
 
                 <div className="object-center mt-4">
-                  <img src={About6} alt=" Not Found" />
+                  <img src={About7} alt=" Not Found" />
                 </div>
               </div>
             </div>
             <div>
               <div className="object-center mt-4">
-                <img src={About7} alt=" Not Found" />
+                <img src={About6} alt=" Not Found" />
               </div>
-              <div className=" text-lg">
-                <p className="text-xl font-bold">2. Konseling Ofline</p>
+              <div className="mt-6 text-lg">
+                <p className="text-xl font-bold">2. Konseling Offline</p>
                 <p className="my-7">Kami menawarkan konseling di tempat yang aman dan nyaman yang terletak di MS Wellbeing Center</p>
 
                 <button className="bg-green-100  hover:bg-secondary hover:text-green-100 text-primary font-bold py-2 px-4 rounded-full" onClick={() => navigate("/klinik")}>
-                  Jadwalkan Konsultasi offline
+                  Jadwalkan Konsultasi Offline
                 </button>
               </div>
             </div>

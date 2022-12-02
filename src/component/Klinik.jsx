@@ -4,6 +4,7 @@ import Card from "./CardKlinik";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 const Klinik = () => {
   const [klinik, setKlinik] = useState([]);
@@ -43,6 +44,7 @@ const Klinik = () => {
           })}
         </div>
       </div>
+      <Footer />
     </>
   );
 };
