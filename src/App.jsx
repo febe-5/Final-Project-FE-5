@@ -14,6 +14,7 @@ import Login from "./pages/Login";
 import Blog from "./pages/Blog";
 import ArticleDetail from "./pages/ArticleDetail";
 import { Route, Routes } from "react-router-dom";
+import Pembayaran from "./component/Pembayaran";
 
 const App = () => {
   return (
@@ -28,10 +29,11 @@ const App = () => {
         <Route path="/detailPsikolog/:id" element={<DetailPsikolog />} />
         <Route path="/detail/:id" element={<DetailKlinik />} />
         <Route path="/psikolog" element={<Psikolog />} />
+        <Route path="/pembayaran/:id" element={<Pembayaran />} />
         <Route path="/klinik" element={<Klinik />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/Login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/blog" element={<Blog />} />
+        <Route path="/Blog" element={<Blog />} />
         <Route path="/articledetail/:slug" element={<ArticleDetail />} />
       </Routes>
     </>

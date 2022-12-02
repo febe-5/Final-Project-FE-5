@@ -27,7 +27,9 @@ const Navbar = () => {
           <Link to="/layananLogin">
             <li className="p-4 hover:text-meds">Layanan</li>
           </Link>
-          <li className="p-4 hover:text-meds">Artikel</li>
+          <Link to="/blog">
+            <li className="p-4 hover:text-meds">Artikel</li>
+          </Link>
           <button>
             <li
               onClick={() => setShowYesNo(true)}
@@ -53,8 +55,15 @@ const Navbar = () => {
             <Link to="/layanan">
               <li className="px-6 py-4 hover:text-meds">Layanan</li>
             </Link>
-            <li className="px-6 py-4 hover:text-meds">Artikel</li>
-            <li className="text-base font-semibold  text-secondary bg-white border-secondary border-2 flex items-center ml-6 mr-28 my-3 py-1 px-7 rounded-full hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out">Login</li>
+            <Link to="/blog">
+              <li className="px-6 py-4 hover:text-meds">Artikel</li>
+            </Link>
+            <li
+              onClick={() => setShowYesNo(true)}
+              className="text-base font-semibold  text-secondary bg-white border-secondary border-2 flex items-center ml-6 mr-28 my-3 py-1 px-7 rounded-full hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out"
+            >
+              Logout
+            </li>
           </ul>
         </div>
       </div>

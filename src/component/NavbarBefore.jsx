@@ -22,7 +22,7 @@ const Navbar = () => {
           <Link to="/layananBefore">
             <li className="p-4 hover:text-meds">Layanan</li>
           </Link>
-          <Link to="/blog">
+          <Link to="/login">
             <li className="p-4 hover:text-meds">Artikel</li>
           </Link>
           <Link to="/login">
@@ -45,7 +45,7 @@ const Navbar = () => {
             <Link to="/layananBefore">
               <li className="px-6 py-4 hover:text-meds">Layanan</li>
             </Link>
-            <Link to="/blog">
+            <Link to="/login">
               <li className="px-6 py-4 hover:text-meds">Artikel</li>
             </Link>
             <Link to="/login">
