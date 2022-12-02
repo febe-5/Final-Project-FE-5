@@ -9,6 +9,10 @@ import DetailPsikolog from "./component/DetailPsikolog";
 import DetailKlinik from "./component/Detail";
 import Psikolog from "./component/Psikolog";
 import Klinik from "./component/Klinik";
+import Register from "./pages/Register";
+import Login from "./pages/Login";
+import Blog from "./pages/Blog";
+import ArticleDetail from "./pages/ArticleDetail";
 import { Route, Routes } from "react-router-dom";
 
 const App = () => {
@@ -25,6 +29,10 @@ const App = () => {
         <Route path="/detail/:id" element={<DetailKlinik />} />
         <Route path="/psikolog" element={<Psikolog />} />
         <Route path="/klinik" element={<Klinik />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/articledetail/:slug" element={<ArticleDetail />} />
       </Routes>
     </>
   );
