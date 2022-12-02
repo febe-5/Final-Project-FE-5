@@ -16,7 +16,7 @@ const Card = (props) => {
             <div className="p-6 text-center">
               <h5 className="text-white text-xl mb-1 font-bold">{props.nama}</h5>
               <p className="text-white text-sm font-normal mb-4">{props.pendidikan}</p>
-              <button className="bg-white  hover:bg-secondary hover:text-white text-primary font-bold py-2 px-4 rounded-full" onClick={() => handleClick(props._id)}>
+              <button className="bg-white  hover:bg-secondary hover:text-white text-primary font-bold py-2 px-4 rounded-full" onClick={() => handleClick(props.id)}>
                 Selengkapnya
               </button>
             </div>
