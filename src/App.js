@@ -10,6 +10,7 @@ import Ofline from "./component/Ofline";
 import Layanan from "./component/Layanan";
 
 import Footer from "./component/Footer";
+import Pembayaran from "./component/Pembayaran";
 
 
 
@@ -20,6 +21,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Konsultasi />} />
         <Route path="/layanan" element={<Layanan />} />
+        <Route path="/pembayaran" element={<Pembayaran />} />
         <Route path="/ofline" element={<Ofline />} />
         <Route path="/about" element={<About />} />
         <Route path="/detail/:id" element={<Detail />} />
