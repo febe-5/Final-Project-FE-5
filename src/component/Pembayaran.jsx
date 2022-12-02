@@ -8,8 +8,6 @@ const Pembayaran = () => {
 
 	const [psikolog, setPsikolog] = useState({});
 
-	const [layanans, setLayanans] = useState([]);
-
 	const [methods, setMethods] = useState([]);
 
 	const [method, setMethod] = useState("");
@@ -32,7 +30,6 @@ const Pembayaran = () => {
 				"https://mental-meds.up.railway.app/api/psikolog/" + id
 			);
 			setPsikolog(response.data.data);
-			setLayanans(response.data.data.layanan);
 		} catch (e) {
 			console.log(e.message);
 		}
