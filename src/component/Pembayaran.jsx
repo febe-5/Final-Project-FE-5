@@ -51,11 +51,11 @@ const Pembayaran = () => {
 
 	const postPembayaran = async (data) => {
 		// jika login regis dah ada pake ini
-		// const token = localStorage.getItem("accessToken");
+		const token = localStorage.getItem("accessToken");
 
 		// ini hanya untuk sementara
-		const token =
-			"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Mzg5MDhkZTQxMWM4YzYzZWE3MDNiODkiLCJuYW1hIjoiQWJpbCIsImVtYWlsIjoiYWJpbEBnbWFpbC5jb20iLCJpYXQiOjE2Njk5ODA2MTd9.4A9B9eyxgqa9fZ8xeZF8mFAb2CDYf4AoTXs5eOS6pZY";
+		// const token =
+		// 	"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Mzg5MDhkZTQxMWM4YzYzZWE3MDNiODkiLCJuYW1hIjoiQWJpbCIsImVtYWlsIjoiYWJpbEBnbWFpbC5jb20iLCJpYXQiOjE2Njk5ODA2MTd9.4A9B9eyxgqa9fZ8xeZF8mFAb2CDYf4AoTXs5eOS6pZY";
 		const response = await axios.post(
 			"https://mental-meds.up.railway.app/api/pembayaran",
 			{
