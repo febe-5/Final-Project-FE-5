@@ -23,7 +23,7 @@ const Login = () => {
     console.log({ email, password });
     axios
       .post(
-        " https://mental-meds.up.railway.app/api/login",
+        "https://mental-meds.up.railway.app/api/login",
         {
           email: email,
           password: password,
