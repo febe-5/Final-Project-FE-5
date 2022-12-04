@@ -2,6 +2,8 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom"
+import Navbar from "../component/Navbar";
+import Footer from "../component/Footer";
 
 
 const ArticleDetail = () => {
@@ -25,6 +27,7 @@ const ArticleDetail = () => {
 
 return (
     <>
+      <Navbar />
       <div className="container w-full md:max-w-3xl mx-auto pt-20">
         
           {articleDetail.filter((item) => item.slug === slug).map((item) => {
@@ -43,6 +46,7 @@ return (
             )
           })}
       </div>
+      <Footer />
     </>
 );
 };

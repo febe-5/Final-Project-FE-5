@@ -17,7 +17,7 @@ const Register = () => {
         e.preventDefault();
         setRegister({ nama, email, umur, password});
 
-        axios.post("https://group-project-2-be-5-production.up.railway.app/api/register", {
+        axios.post(" https://mental-meds.up.railway.app/api/register", {
             nama: nama,
             email: email,
             umur: umur,
